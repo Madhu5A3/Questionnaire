@@ -1,0 +1,113 @@
+import React, { useEffect } from 'react';
+// { useState, useEffect } 
+import { connect } from 'react-redux'
+// import { getQuestions } from '../Reducer/RootReducer';
+import AddThunkQuestion from '../actionCreators/AddThunkQuestion';
+// import addQuestions from '../actionCreators/AddQuestion';
+
+
+const QuestionBox = ({props}) => {
+    return (
+
+    )
+}
+function QuestionBox(props) {
+
+
+    useEffect(() => {
+        props.dispatch(AddThunkQuestion());
+    })
+    //states declared to verify the incoming data 
+    // const [apiData, getApiData] = useState([]);
+
+    // logic to fetch data from the json-server
+    /*useEffect(() => {
+        fetch('http://localhost:3001/questions')
+            .then(res => res.json())
+            .then(res => { getApiData(res) })
+    })*/
+
+    //viewing the data fetched in the browser
+    /*const apiList = apiData.map(data => {
+        return (
+            <p key={data.id}>{data.content}</p>
+        )
+    })*/
+    /*const handleClick = () => {
+        const { questions } = props
+        console.log(questions)
+    }*/
+    /*useEffect(() => {
+        props.dispatch(AddThunkQuestion())
+    })*/
+    //const { questions } = props
+    //const questionList = questions.map(data => {
+    //  return (
+    //    <p key={data.id}>{data.content}</p>
+    //)
+    //})
+    const { questions } = props.questions
+
+    const questionList = questions.map(question => {
+        return (
+            <p key={question.id}>{question.content}</p>
+        )
+    })
+    return (
+        /*<ul>
+            {questions.map(question =>
+                <li key={question.id}>{question.content}</li>
+            )}
+        </ul>*/
+
+        <div className="questionbox">
+            {questionList}
+        </div>
+    )
+
+    // return <div className="questionBoxContainer">apiData</div>
+}
+
+const mapStateToProps = state => ({
+    questions: state.questions
+})
+
+/*const mapDispatchToProps = dispatch => {
+    return {
+        addQuestions: (data) => { dispatch(addQuestions(data)) }
+    }
+}*/
+
+export default connect(mapStateToProps)(QuestionBox);
+
+
+
+
+
+
+
+ /*useEffect(() => {
+        props.dispatch(AddThunkQuestion());
+    })*/
+    /*const { questions } = props
+
+    const questionList = questions.map(question => {
+        return (
+            <p key={question.id}>{question.content}</p>
+        )
+    })*/
+    /*return (
+        <div className="questionbox">
+            {questionList}
+        </div>
+    )/
+
+const mapStateToProps = state => ({
+    questions: state.questions
+})
+
+/*const mapDispatchToProps = dispatch => {
+    return {
+        addQuestions: (data) => { dispatch(addQuestions(data)) }
+    }
+}*/
