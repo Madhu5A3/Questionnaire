@@ -29,9 +29,10 @@ const QuestionBox = () => {
             );
         });
 
+        let displayRandomQuestion = questionList[Math.floor(Math.random()*questionList.length)+1];
     return (
         <div className="questionContainer">
-            {questionList}
+            {displayRandomQuestion}
             <div className={css`
             display: flex;
             justify-content: center;
