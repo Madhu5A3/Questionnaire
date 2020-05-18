@@ -29,7 +29,7 @@ const QuestionBox = () => {
             );
         });
 
-        let displayRandomQuestion = questionList[Math.floor(Math.random()*questionList.length)+1];
+        let displayRandomQuestion = questionList[Math.floor(Math.random()*questionList.length)];
     return (
         <div className="questionContainer">
             {displayRandomQuestion}
