@@ -51,4 +51,3 @@ const QuestionBox = () => {
 }
 
 export default QuestionBox;
-//Math.floor(Math.random()*3)+1
