@@ -5,12 +5,9 @@ const initialState = {
 const RootReducer = (state=initialState, action) =>{
     switch(action.type){
         case 'ADD_QUESTIONS':
-            let filtered_actions = action.payload.filter(question => {
-                return question.id;
-            })
             return {
                 ...state,
-                questions: filtered_actions
+                questions: action.payload
             }
         default:
             return state;
