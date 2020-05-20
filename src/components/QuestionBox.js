@@ -1,18 +1,22 @@
-import React, { useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import AddThunkQuestion from '../actionCreators/AddThunkQuestion';
 import { useSelector, useDispatch } from 'react-redux';
 import { css } from 'emotion';
 
 const QuestionBox = () => {
     const dispatch = useDispatch();
+    const [questions,setQuestions] = useState([]);
     const questionsSelector = useSelector(state => state.questions);
 
-    const thunkDispatcher = useCallback(
+    /*const thunkDispatcher = useCallback(
         () => dispatch(AddThunkQuestion()),
         [dispatch]
-    )
+    )*/
 
-    const questionList =
+    useEffect(() => dispatch(AddThunkQuestion()), [dispatch])
+
+    const thunkDispatcher = () => {
+        const questionList =
         questionsSelector.map(question => {
             return (
                 <p className={css`
@@ -29,10 +33,15 @@ const QuestionBox = () => {
             );
         });
 
-    let displayRandomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
+        let displayRandomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
+
+        //return displayRandomQuestion;
+        setQuestions(displayRandomQuestion);
+    }
+
     return (
         <div className="questionContainer">
-            {displayRandomQuestion}
+            {questions}
             <div className={css`
             display: flex;
             justify-content: center;
