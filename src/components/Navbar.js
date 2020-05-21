@@ -1,23 +1,24 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { unlistWrapper, listWrapper, linkWrapper } from '../css/GlobalCss';
 
 const Navbar = () => {
     return (
         <div className="questionList">
             <nav className="navbarContainer">
-                <ul className="listContainer">
-                    <li>
-                        <Link to="/">
+                <ul className={unlistWrapper}>
+                    <li className={listWrapper}>
+                        <Link className={linkWrapper} to="/">
                             QuestionBox
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/edit/:edit_id">
+                    <li className={listWrapper}>
+                        <Link className={linkWrapper} to="/edit/:edit_id">
                             EditQuestion
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/list">
+                    <li className={listWrapper}>
+                        <Link className={linkWrapper} to="/list">
                             Question List
                         </Link>
                     </li>
