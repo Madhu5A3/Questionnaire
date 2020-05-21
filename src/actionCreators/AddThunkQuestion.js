@@ -1,5 +1,4 @@
 import { addQuestions } from './AddQuestion';
-// import { useState } from 'react';
 
 const AddThunkQuestion = () => {
     return (dispatch) => {

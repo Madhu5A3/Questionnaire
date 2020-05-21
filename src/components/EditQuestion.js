@@ -1,28 +1,30 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-// import { useParams } from 'react-router-dom';
-// import { editQuestions } from '../actionCreators/AddQuestion';
+import { useDispatch } from 'react-redux';
+// import { addQuestions } from '../actionCreators/AddQuestion';
+import { editQuestions } from '../actionCreators/EditQuestion';
+import { formWrapper, inputWrapper } from '../css/GlobalCss';
 
 const EditQuestion = (props) => {
     const [enteredValue, setOutputValue] = useState('');
-    const { button_id } = props.location;
-    const questionList = useSelector(state => state.questions);
-    //console.log(button_id);
-    //console.log(questionList[button_id - 1].content);
-    //const { buttonid } = useParams();
+    const dispatch = useDispatch();
+    const { button_id, button_content } = props.location;
+    // const questionList = useSelector(state => state.questions);
     const handleEdit = (enteredText) => {
         setOutputValue(enteredText.target.value);
-        // editQuestions(enteredValue)
     }
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    }
-    // console.log(enteredValue);
+    /*const handleSubmit = (e) => {
+        e.preventDefault()
+    }*/
+
     return (
         <div className="questionEdit">
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder={questionList[button_id - 1].content} onChange={handleEdit} value={enteredValue}></input>
-                <input type="submit"></input>
+            <form className={formWrapper} onSubmit={() => dispatch(editQuestions(button_id, enteredValue))}>
+                <input className={inputWrapper} type="text"
+                    placeholder={button_content}
+                    onChange={handleEdit}
+                    value={enteredValue}>
+                </input>
+                <input className={inputWrapper} type="submit"></input>
             </form>
         </div>
     );
