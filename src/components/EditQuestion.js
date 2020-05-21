@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { addQuestions } from '../actionCreators/AddQuestion';
+
 import { editQuestions } from '../actionCreators/EditQuestion';
 import { formWrapper, inputWrapper } from '../css/GlobalCss';
 
@@ -8,7 +8,6 @@ const EditQuestion = (props) => {
     const [enteredValue, setOutputValue] = useState('');
     const dispatch = useDispatch();
     const { button_id, button_content } = props.location;
-    // const questionList = useSelector(state => state.questions);
     const handleEdit = (enteredText) => {
         setOutputValue(enteredText.target.value);
     }
