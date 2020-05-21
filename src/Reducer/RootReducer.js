@@ -2,6 +2,13 @@ const initialState = {
     questions: []
 };
 
+<<<<<<< HEAD
+=======
+/*type: 'EDIT_QUESTIONS',
+        payload_id: id,
+        payload: data*/
+
+>>>>>>> 1cafc2cb72a8877cd935a88d31d567664bdc9a8c
 const RootReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_QUESTIONS':

@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import AddThunkQuestion from '../actionCreators/AddThunkQuestion';
 import { useSelector, useDispatch } from 'react-redux';
+<<<<<<< HEAD
+=======
+// import { css } from 'emotion';
+>>>>>>> 1cafc2cb72a8877cd935a88d31d567664bdc9a8c
 import { questionWrapper, containerWrapper, buttonWrapper } from '../css/GlobalCss';
 
 const QuestionBox = () => {
