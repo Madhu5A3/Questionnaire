@@ -5,12 +5,3 @@ export const editQuestions = (id, data) => {
         payload: data
     }
 }
-
-
-/*case 'EDIT_QUESTIONS':
-let newStateQuestion = action.payload;
-state.questions[action.id - 1].content = newStateQuestion;
-return {
-    ...state,
-    questions: state.questions
-}*/

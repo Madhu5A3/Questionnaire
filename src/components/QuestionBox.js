@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AddThunkQuestion from '../actionCreators/AddThunkQuestion';
 import { useSelector, useDispatch } from 'react-redux';
-// import { css } from 'emotion';
 import { questionWrapper, containerWrapper, buttonWrapper } from '../css/GlobalCss';
 
 const QuestionBox = () => {
@@ -22,8 +21,6 @@ const QuestionBox = () => {
             });
 
         let displayRandomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
-
-        //return displayRandomQuestion;
         setQuestions(displayRandomQuestion);
     }
 
