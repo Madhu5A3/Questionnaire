@@ -69,3 +69,11 @@ export const inputWrapper = css`
     padding: 10px;
     border-radius: 2px;
 `;
+
+export const buttonEditWrapper = css`
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 2px;
+`;
