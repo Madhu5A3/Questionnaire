@@ -1,4 +1,4 @@
-import { css } from 'emotion'
+import { css } from 'emotion';
 
 export const questionWrapper = css`
         display: flex;
@@ -40,7 +40,7 @@ export const buttonListContainer = css`
     `;
 
 export const listWrapper = css`
-    float: right;
+    float: left;
 `;
 
 export const linkWrapper = css`

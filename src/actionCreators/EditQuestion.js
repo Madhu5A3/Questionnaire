@@ -1,7 +1,7 @@
 export const editQuestions = (id, data) => {
+    console.log(id , data)
     return {
         type: 'EDIT_QUESTIONS',
-        payload_id: id,
-        payload: data
+        payload: { id, data }
     }
 }
