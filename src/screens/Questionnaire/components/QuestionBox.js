@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import EditQuestion from './EditQuestion'
+import QuestionList from './QuestionList';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Navbar from './Navbar';
 import AddThunkQuestion from '../actionCreators/AddThunkQuestion';
 import { useSelector, useDispatch } from 'react-redux';
 import { questionWrapper, containerWrapper, buttonWrapper } from '../css/GlobalCss';
@@ -25,12 +29,19 @@ const QuestionBox = () => {
     }
 
     return (
-        <div className="questionContainer">
-            {questions}
-            <div className={containerWrapper}>
-                <button className={buttonWrapper} onClick={thunkDispatcher}>Ask Me A Question</button>
+        <BrowserRouter>
+            <Navbar />
+            <div className="questionContainer">
+                {questions}
+                <div className={containerWrapper}>
+                    <button className={buttonWrapper} onClick={thunkDispatcher}>Ask Me A Question</button>
+                </div>
             </div>
-        </div>
+            <Switch>
+                <Route path="/edit/:edit_id" component={EditQuestion}></Route>
+                <Route path="/list" component={QuestionList}></Route>
+            </Switch>
+        </BrowserRouter>
     )
 }
 
