@@ -11,13 +11,16 @@ const RootReducer = (state = initialState, action) => {
             }
 
         case 'EDIT_QUESTIONS':
-            return {
-                ...state,
-                questions: {
-                    [action.payload_id - 1]: {
-                        id: action.payload_id,
-                        content: action.payload
+            {
+                let newQuestions = state.questions.map((question) => {
+                    if (question.id === action.payload.id) {
+                        question.content = action.payload.data
                     }
+                    return question
+                })
+                return {
+                    ...state,
+                    questions: newQuestions
                 }
             }
         default:

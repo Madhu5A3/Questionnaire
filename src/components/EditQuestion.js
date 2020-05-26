@@ -13,10 +13,11 @@ const EditQuestion = (props) => {
         setOutputValue(enteredText.target.value);
     }
     const handleSubmit = (e) => {
-        history.push('/');
         e.preventDefault()
+        history.push('/list');
     }
     const handleSubmitWrap = () => dispatch(editQuestions(button_id, enteredValue));
+
     return (
         <div className="questionEdit">
             <form className={formWrapper} onSubmit={handleSubmit}>
