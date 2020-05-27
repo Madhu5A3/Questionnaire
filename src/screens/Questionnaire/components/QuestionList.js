@@ -11,7 +11,7 @@ const QuestionList = () => {
             <p className={disQuestionListWrapper} key={question.id}>{question.content}
                 <button className={buttonListContainer}
                     onClick={() => history.push({
-                        pathname: '/edit/:' + question.id,
+                        pathname: '/home/edit/:' + question.id,
                         button_id: question.id,
                         button_content: question.content
                     })}>Edit</button>

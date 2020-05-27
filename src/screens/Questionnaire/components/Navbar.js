@@ -8,12 +8,17 @@ const Navbar = () => {
             <nav className="navbarContainer">
                 <ul className={unlistWrapper}>
                     <li className={listWrapper}>
-                        <Link className={linkWrapper} to="/edit/:edit_id">
+                        <Link className={linkWrapper} to="/home/qa">
+                            QuestionBox
+                        </Link>
+                    </li>
+                    <li className={listWrapper}>
+                        <Link className={linkWrapper} to="/home/edit/:edit_id">
                             EditQuestion
                         </Link>
                     </li>
                     <li className={listWrapper}>
-                        <Link className={linkWrapper} to="/list">
+                        <Link className={linkWrapper} to="/home/list">
                             Question List
                         </Link>
                     </li>

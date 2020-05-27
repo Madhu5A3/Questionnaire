@@ -5,10 +5,20 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import RootReducer from './screens/Questionnaire/Reducer/RootReducer';
+import ReduxReducer from './screens/RootReducer/ReduxReducer';
 import thunk from 'redux-thunk';
 
-const store = createStore(RootReducer, applyMiddleware(thunk))
+const store = createStore(ReduxReducer, applyMiddleware(thunk))
+/*store.dispatch({
+  type: 'ADD_QUESTIONS',
+  payload: [
+    {
+      "id": 1,
+      "content": "What is the Capital of India?"
+    }
+  ]
+})
+console.log(store.getState())*/
 
 ReactDOM.render(
   <Provider store={store}><App /></Provider>,

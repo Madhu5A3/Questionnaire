@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Home';
-import QuestionBox from './screens/Questionnaire/components/QuestionBox';
+import HomeQA from './screens/Questionnaire/components/Home';
 import UserProfile from './screens/UserProfile/components/UserProfile';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={Home}></Route>
-          <Route path="/qa" component={QuestionBox}></Route>
+          <Route path="/home/qa" component={HomeQA}></Route>
           <Route path="/userprofile" component={UserProfile}></Route>
         </Switch>
       </div>

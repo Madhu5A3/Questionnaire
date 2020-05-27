@@ -2,7 +2,7 @@ const initialState = {
     questions: []
 };
 
-const RootReducer = (state = initialState, action) => {
+const QuestionnaireReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_QUESTIONS':
             return {
@@ -28,4 +28,4 @@ const RootReducer = (state = initialState, action) => {
     }
 }
 
-export default RootReducer;
+export default QuestionnaireReducer;
