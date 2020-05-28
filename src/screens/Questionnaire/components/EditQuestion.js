@@ -14,7 +14,7 @@ const EditQuestion = (props) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        history.push('/list');
+        history.push('/home/list');
     }
     const handleSubmitWrap = () => dispatch(editQuestions(button_id, enteredValue));
 

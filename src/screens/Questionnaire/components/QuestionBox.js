@@ -6,9 +6,10 @@ import { questionWrapper, containerWrapper, buttonWrapper } from '../css/GlobalC
 const QuestionBox = () => {
     const dispatch = useDispatch();
     const [questions, setQuestions] = useState([]);
-    const questionsSelector = useSelector(state => state.questions);
     useEffect(() => dispatch(AddThunkQuestion()), [dispatch])
+    const questionsSelector = useSelector(state => state.QuestionnaireReducer.questions);
 
+    console.log('cool' + questionsSelector)
     const thunkDispatcher = () => {
         const questionList =
             questionsSelector.map(question => {
