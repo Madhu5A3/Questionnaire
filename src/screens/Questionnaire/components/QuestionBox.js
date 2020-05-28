@@ -7,7 +7,7 @@ const QuestionBox = () => {
     const dispatch = useDispatch();
     const [questions, setQuestions] = useState([]);
     useEffect(() => dispatch(AddThunkQuestion()), [dispatch])
-    const questionsSelector = useSelector(state => state.questions);
+    const questionsSelector = useSelector(state => state.QuestionnaireReducer.questions);
 
     console.log('cool' + questionsSelector)
     const thunkDispatcher = () => {

@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { disQuestionListWrapper, buttonListContainer } from '../css/GlobalCss';
 
 const QuestionList = () => {
-    const questionList = useSelector(state => state.questions);
+    const questionList = useSelector(state => state.QuestionnaireReducer.questions);
     const history = useHistory();
     const disQuestions = questionList.map(question => {
         return (
