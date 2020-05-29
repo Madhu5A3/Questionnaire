@@ -4,7 +4,7 @@ import { unlistWrapper, listWrapper, linkWrapper } from '../css/GlobalCss';
 
 const Navbar = () => {
     return (
-        <div className="questionList">
+        <div data-test="questionList">
             <nav className="navbarContainer">
                 <ul className={unlistWrapper}>
                     <li className={listWrapper}>
