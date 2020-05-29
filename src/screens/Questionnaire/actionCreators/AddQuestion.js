@@ -4,3 +4,7 @@ export const addQuestions = (data) => {
         payload: data
     }
 }
+
+export const types = {
+    ADD_QUESTIONS: 'ADD_QUESTIONS'
+}
