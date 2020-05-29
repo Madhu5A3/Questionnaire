@@ -7,7 +7,7 @@ import UserProfile from './screens/UserProfile/components/UserProfile';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div data-test="App">
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route path="/home/qa" component={HomeQA}></Route>

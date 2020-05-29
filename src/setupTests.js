@@ -1,13 +1,9 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import Home from './Home';
+// import React from 'react';
+import Enzyme from 'enzyme';
+import EnzymeAdapter from 'enzyme-adapter-react-16';
 
 
-describe('Home Component', () => {
-    it('it should render without errors', () => {
-        const component = shallow(<Home />);
-        console.log(component.debug());
-        // const wrapper = component.find('.questionContainer');
-        //expect(wrapper.length).toBe(2);
-    })
-})
+Enzyme.configure({
+    adapter: new EnzymeAdapter(),
+    disableLifecycleMethods: true
+});
