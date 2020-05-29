@@ -4,7 +4,7 @@ import App from '../App';
 import { appAttr } from '../../Utils/index';
 
 const appTest = (props = {}) => {
-    const component = shallow(<App />);
+    const component = shallow(<App {...props} />);
     return component;
 }
 

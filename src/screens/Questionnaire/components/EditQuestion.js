@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { editQuestions } from '../actionCreators/EditQuestion';
 import { formWrapper, inputWrapper, buttonEditWrapper } from '../css/GlobalCss';
 import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const EditQuestion = (props) => {
     const [enteredValue, setOutputValue] = useState('');
@@ -31,5 +32,10 @@ const EditQuestion = (props) => {
         </div>
     );
 };
+
+EditQuestion.propTypes = {
+    button_id: PropTypes.number,
+    button_content: PropTypes.string
+}
 
 export default EditQuestion;
