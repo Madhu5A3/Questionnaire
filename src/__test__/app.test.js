@@ -15,8 +15,6 @@ describe('App Component', () => {
     });
 
     it('it should render without errors', () => {
-        //  const component = appTest();
-        // console.log(component.debug());
         const wrapper = appAttr(component, 'App');
         expect(wrapper.length).toBe(1);
     })

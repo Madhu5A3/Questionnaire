@@ -4,3 +4,7 @@ export const UserAction = (data) => {
         payload: data
     }
 }
+
+export const types = {
+    USER_DATA: 'USER_DATA'
+}
