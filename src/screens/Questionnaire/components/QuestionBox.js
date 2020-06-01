@@ -9,6 +9,7 @@ const QuestionBox = () => {
     useEffect(() => dispatch(AddThunkQuestion()), [dispatch])
     const questionsSelector = useSelector(state => state.QuestionnaireReducer.questions);
 
+    console.table(questionsSelector);
     const thunkDispatcher = () => {
         const questionList =
             questionsSelector.map(question => {
