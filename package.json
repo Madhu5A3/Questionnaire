@@ -28,7 +28,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": " CI=true npm test"
+      "pre-commit": "CI=true npm test",
+      "pre-push": "CI=true npm test"
     }
   },
   "eslintConfig": {
